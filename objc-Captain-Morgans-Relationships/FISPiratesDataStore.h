@@ -7,15 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
+#import "Pirate.h"
 
 @interface FISPiratesDataStore : NSObject
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) NSArray *pirates;
 
+- (void)fetchData;
 - (void)save;
 - (NSURL *)applicationDocumentsDirectory;
 
 + (instancetype) sharedPiratesDataStore;
 
 @end
+

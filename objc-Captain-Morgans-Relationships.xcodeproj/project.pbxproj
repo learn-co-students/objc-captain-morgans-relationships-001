@@ -15,12 +15,18 @@
 		318F5F9619F7F56800ADA305 /* FISShipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 318F5F9019F7F56800ADA305 /* FISShipsViewController.m */; };
 		318F5F9719F7F56800ADA305 /* FISShipDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 318F5F9219F7F56800ADA305 /* FISShipDetailViewController.m */; };
 		318F5F9819F7F56800ADA305 /* FISPiratesDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 318F5F9419F7F56800ADA305 /* FISPiratesDataStore.m */; };
-		318F5F9A19F7F58600ADA305 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318F5F9919F7F58600ADA305 /* main.storyboard */; };
+		318F5F9A19F7F58600ADA305 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318F5F9919F7F58600ADA305 /* Main.storyboard */; };
 		318F5F9D19F7F5CF00ADA305 /* objcCMR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 318F5F9B19F7F5CF00ADA305 /* objcCMR.xcdatamodeld */; };
 		318F5F9F19F7F63E00ADA305 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318F5F9E19F7F63E00ADA305 /* CoreData.framework */; };
 		318F5FA119F7F64200ADA305 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318F5FA019F7F64200ADA305 /* Foundation.framework */; };
 		318F5FA319F7F64900ADA305 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318F5FA219F7F64900ADA305 /* UIKit.framework */; };
 		318F5FA519F7F65200ADA305 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318F5FA419F7F65200ADA305 /* CoreGraphics.framework */; };
+		318F5FB319F7F9C600ADA305 /* FISAddPirateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 318F5FB019F7F9C600ADA305 /* FISAddPirateViewController.m */; };
+		318F5FB419F7F9C600ADA305 /* FISAddShipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 318F5FB219F7F9C600ADA305 /* FISAddShipViewController.m */; };
+		318F5FD919F93C9800ADA305 /* Pirate.m in Sources */ = {isa = PBXBuildFile; fileRef = 318F5FD819F93C9800ADA305 /* Pirate.m */; };
+		318F5FDC19F93C9800ADA305 /* Ship.m in Sources */ = {isa = PBXBuildFile; fileRef = 318F5FDB19F93C9800ADA305 /* Ship.m */; };
+		318F5FDF19F93C9800ADA305 /* Engine.m in Sources */ = {isa = PBXBuildFile; fileRef = 318F5FDE19F93C9800ADA305 /* Engine.m */; };
+		56438095645D46D1AB360BF5 /* libPods-objc-Captain-Morgans-RelationshipsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5E3342FC22194EBABE9910 /* libPods-objc-Captain-Morgans-RelationshipsTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2006991582EE58C50D619115 /* Pods-objc-Captain-Morgans-RelationshipsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-objc-Captain-Morgans-RelationshipsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-objc-Captain-Morgans-RelationshipsTests/Pods-objc-Captain-Morgans-RelationshipsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		318F5F6419F7F51800ADA305 /* objc-Captain-Morgans-Relationships.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "objc-Captain-Morgans-Relationships.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		318F5F6819F7F51800ADA305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		318F5F6919F7F51800ADA305 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -51,12 +58,24 @@
 		318F5F9219F7F56800ADA305 /* FISShipDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISShipDetailViewController.m; sourceTree = "<group>"; };
 		318F5F9319F7F56800ADA305 /* FISPiratesDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISPiratesDataStore.h; sourceTree = "<group>"; };
 		318F5F9419F7F56800ADA305 /* FISPiratesDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISPiratesDataStore.m; sourceTree = "<group>"; };
-		318F5F9919F7F58600ADA305 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		318F5F9919F7F58600ADA305 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		318F5F9C19F7F5CF00ADA305 /* objcCMR.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = objcCMR.xcdatamodel; sourceTree = "<group>"; };
 		318F5F9E19F7F63E00ADA305 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		318F5FA019F7F64200ADA305 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		318F5FA219F7F64900ADA305 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		318F5FA419F7F65200ADA305 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		318F5FAF19F7F9C600ADA305 /* FISAddPirateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISAddPirateViewController.h; sourceTree = "<group>"; };
+		318F5FB019F7F9C600ADA305 /* FISAddPirateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISAddPirateViewController.m; sourceTree = "<group>"; };
+		318F5FB119F7F9C600ADA305 /* FISAddShipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISAddShipViewController.h; sourceTree = "<group>"; };
+		318F5FB219F7F9C600ADA305 /* FISAddShipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISAddShipViewController.m; sourceTree = "<group>"; };
+		318F5FD719F93C9800ADA305 /* Pirate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pirate.h; sourceTree = "<group>"; };
+		318F5FD819F93C9800ADA305 /* Pirate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pirate.m; sourceTree = "<group>"; };
+		318F5FDA19F93C9800ADA305 /* Ship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ship.h; sourceTree = "<group>"; };
+		318F5FDB19F93C9800ADA305 /* Ship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ship.m; sourceTree = "<group>"; };
+		318F5FDD19F93C9800ADA305 /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
+		318F5FDE19F93C9800ADA305 /* Engine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Engine.m; sourceTree = "<group>"; };
+		582910FBEB560389DEE8363E /* Pods-objc-Captain-Morgans-RelationshipsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-objc-Captain-Morgans-RelationshipsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-objc-Captain-Morgans-RelationshipsTests/Pods-objc-Captain-Morgans-RelationshipsTests.release.xcconfig"; sourceTree = "<group>"; };
+		DD5E3342FC22194EBABE9910 /* libPods-objc-Captain-Morgans-RelationshipsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-objc-Captain-Morgans-RelationshipsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,18 +94,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56438095645D46D1AB360BF5 /* libPods-objc-Captain-Morgans-RelationshipsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E3159DB50602C57237C2840 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD5E3342FC22194EBABE9910 /* libPods-objc-Captain-Morgans-RelationshipsTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		318F5F5B19F7F51800ADA305 = {
 			isa = PBXGroup;
 			children = (
 				318F5F6619F7F51800ADA305 /* objc-Captain-Morgans-Relationships */,
 				318F5F8019F7F51800ADA305 /* objc-Captain-Morgans-RelationshipsTests */,
 				318F5F6519F7F51800ADA305 /* Products */,
+				6DDC34409F2AE8C0616CA23F /* Pods */,
+				0E3159DB50602C57237C2840 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,9 +132,13 @@
 		318F5F6619F7F51800ADA305 /* objc-Captain-Morgans-Relationships */ = {
 			isa = PBXGroup;
 			children = (
+				318F5FAF19F7F9C600ADA305 /* FISAddPirateViewController.h */,
+				318F5FB019F7F9C600ADA305 /* FISAddPirateViewController.m */,
+				318F5FB119F7F9C600ADA305 /* FISAddShipViewController.h */,
+				318F5FB219F7F9C600ADA305 /* FISAddShipViewController.m */,
 				318F5F6B19F7F51800ADA305 /* AppDelegate.h */,
 				318F5F6C19F7F51800ADA305 /* AppDelegate.m */,
-				318F5F9919F7F58600ADA305 /* main.storyboard */,
+				318F5F9919F7F58600ADA305 /* Main.storyboard */,
 				318F5F8D19F7F56800ADA305 /* FISPiratesViewController.h */,
 				318F5F8E19F7F56800ADA305 /* FISPiratesViewController.m */,
 				318F5F8F19F7F56800ADA305 /* FISShipsViewController.h */,
@@ -114,6 +148,12 @@
 				318F5F9319F7F56800ADA305 /* FISPiratesDataStore.h */,
 				318F5F9419F7F56800ADA305 /* FISPiratesDataStore.m */,
 				318F5F9B19F7F5CF00ADA305 /* objcCMR.xcdatamodeld */,
+				318F5FDD19F93C9800ADA305 /* Engine.h */,
+				318F5FDE19F93C9800ADA305 /* Engine.m */,
+				318F5FDA19F93C9800ADA305 /* Ship.h */,
+				318F5FDB19F93C9800ADA305 /* Ship.m */,
+				318F5FD719F93C9800ADA305 /* Pirate.h */,
+				318F5FD819F93C9800ADA305 /* Pirate.m */,
 				318F5F7419F7F51800ADA305 /* Images.xcassets */,
 				318F5F7619F7F51800ADA305 /* LaunchScreen.xib */,
 				318F5F6719F7F51800ADA305 /* Supporting Files */,
@@ -150,6 +190,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6DDC34409F2AE8C0616CA23F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2006991582EE58C50D619115 /* Pods-objc-Captain-Morgans-RelationshipsTests.debug.xcconfig */,
+				582910FBEB560389DEE8363E /* Pods-objc-Captain-Morgans-RelationshipsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 318F5F8A19F7F51800ADA305 /* Build configuration list for PBXNativeTarget "objc-Captain-Morgans-RelationshipsTests" */;
 			buildPhases = (
+				9A06461D2FE7B6714BAF4305 /* Check Pods Manifest.lock */,
 				318F5F7919F7F51800ADA305 /* Sources */,
 				318F5F7A19F7F51800ADA305 /* Frameworks */,
 				318F5F7B19F7F51800ADA305 /* Resources */,
+				DA98260775C0C8C9672E5D38 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,7 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				318F5F7819F7F51800ADA305 /* LaunchScreen.xib in Resources */,
-				318F5F9A19F7F58600ADA305 /* main.storyboard in Resources */,
+				318F5F9A19F7F58600ADA305 /* Main.storyboard in Resources */,
 				318F5F7519F7F51800ADA305 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,18 +296,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9A06461D2FE7B6714BAF4305 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DA98260775C0C8C9672E5D38 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-objc-Captain-Morgans-RelationshipsTests/Pods-objc-Captain-Morgans-RelationshipsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		318F5F6019F7F51800ADA305 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				318F5FD919F93C9800ADA305 /* Pirate.m in Sources */,
 				318F5F9719F7F56800ADA305 /* FISShipDetailViewController.m in Sources */,
 				318F5F9619F7F56800ADA305 /* FISShipsViewController.m in Sources */,
 				318F5F6D19F7F51800ADA305 /* AppDelegate.m in Sources */,
+				318F5FDC19F93C9800ADA305 /* Ship.m in Sources */,
+				318F5FDF19F93C9800ADA305 /* Engine.m in Sources */,
+				318F5FB319F7F9C600ADA305 /* FISAddPirateViewController.m in Sources */,
 				318F5F9D19F7F5CF00ADA305 /* objcCMR.xcdatamodeld in Sources */,
 				318F5F9519F7F56800ADA305 /* FISPiratesViewController.m in Sources */,
 				318F5F6A19F7F51800ADA305 /* main.m in Sources */,
 				318F5F9819F7F56800ADA305 /* FISPiratesDataStore.m in Sources */,
+				318F5FB419F7F9C600ADA305 /* FISAddShipViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +476,7 @@
 		};
 		318F5F8B19F7F51800ADA305 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2006991582EE58C50D619115 /* Pods-objc-Captain-Morgans-RelationshipsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -406,6 +496,7 @@
 		};
 		318F5F8C19F7F51800ADA305 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 582910FBEB560389DEE8363E /* Pods-objc-Captain-Morgans-RelationshipsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -438,6 +529,7 @@
 				318F5F8919F7F51800ADA305 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		318F5F8A19F7F51800ADA305 /* Build configuration list for PBXNativeTarget "objc-Captain-Morgans-RelationshipsTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +538,7 @@
 				318F5F8C19F7F51800ADA305 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

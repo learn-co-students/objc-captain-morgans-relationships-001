@@ -8,30 +8,27 @@
 
 #import "FISShipDetailViewController.h"
 
+
+#import "FISShipDetailViewController.h"
+#import "Pirate.h"
+#import "Engine.h"
+
 @interface FISShipDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *shipNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *pirateNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *propTypeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *hpLabel;
-@property (weak, nonatomic) IBOutlet UILabel *sailSizeLabel;
 
 @end
 
 @implementation FISShipDetailViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    self.shipNameLabel.text = self.ship.name;
+    self.pirateNameLabel.text = self.ship.pirate.name;
+    self.propTypeLabel.text = self.ship.engine.engineType;
 }
 
 - (void)didReceiveMemoryWarning
