@@ -13,7 +13,7 @@
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
-- (void)save;
+- (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
 + (instancetype) sharedPiratesDataStore;

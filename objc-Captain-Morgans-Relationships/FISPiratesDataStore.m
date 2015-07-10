@@ -23,7 +23,7 @@
     return _sharedPiratesDataStore;
 }
 
-- (void)save
+- (void)saveContext
 {
     NSError *error = nil;
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
@@ -71,5 +71,27 @@
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
+
+#pragma mark - test data
+
+-(void) generateTestData
+{
+    // TODO: create test data
+    
+    // save and refetch
+    [self saveContext];
+    [self fetchData];
+}
+
+- (void)fetchData
+{
+    // TODO: make an NSFetchRequest, execute and fill datastore
+    
+    // TODO: finish this so it will generate test data if your datastore is empty
+    if (<#yourStorageArrayProperty#>.count == 0) {
+        [self generateTestData];
+    }
+}
+
 
 @end
