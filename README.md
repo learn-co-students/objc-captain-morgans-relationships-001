@@ -1,7 +1,4 @@
----
-tags: coredata,relationships,segue
-languages: objc
----
+
 
 # Captain Morgans relationships
 
