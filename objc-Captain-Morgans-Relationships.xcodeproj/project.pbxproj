@@ -228,6 +228,7 @@
 				318F5F7A19F7F51800ADA305 /* Frameworks */,
 				318F5F7B19F7F51800ADA305 /* Resources */,
 				DA98260775C0C8C9672E5D38 /* Copy Pods Resources */,
+				824015896485D4187018D110 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,6 +298,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		824015896485D4187018D110 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-objc-Captain-Morgans-RelationshipsTests/Pods-objc-Captain-Morgans-RelationshipsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9A06461D2FE7B6714BAF4305 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
