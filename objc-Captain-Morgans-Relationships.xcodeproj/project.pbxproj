@@ -16,7 +16,7 @@
 		318F5F9619F7F56800ADA305 /* FISShipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 318F5F9019F7F56800ADA305 /* FISShipsViewController.m */; };
 		318F5F9719F7F56800ADA305 /* FISShipDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 318F5F9219F7F56800ADA305 /* FISShipDetailViewController.m */; };
 		318F5F9819F7F56800ADA305 /* FISPiratesDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 318F5F9419F7F56800ADA305 /* FISPiratesDataStore.m */; };
-		318F5F9A19F7F58600ADA305 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318F5F9919F7F58600ADA305 /* main.storyboard */; };
+		318F5F9A19F7F58600ADA305 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318F5F9919F7F58600ADA305 /* Main.storyboard */; };
 		318F5F9D19F7F5CF00ADA305 /* objcCMR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 318F5F9B19F7F5CF00ADA305 /* objcCMR.xcdatamodeld */; };
 		318F5F9F19F7F63E00ADA305 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318F5F9E19F7F63E00ADA305 /* CoreData.framework */; };
 		318F5FA119F7F64200ADA305 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318F5FA019F7F64200ADA305 /* Foundation.framework */; };
@@ -58,7 +58,7 @@
 		318F5F9219F7F56800ADA305 /* FISShipDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISShipDetailViewController.m; sourceTree = "<group>"; };
 		318F5F9319F7F56800ADA305 /* FISPiratesDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISPiratesDataStore.h; sourceTree = "<group>"; };
 		318F5F9419F7F56800ADA305 /* FISPiratesDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISPiratesDataStore.m; sourceTree = "<group>"; };
-		318F5F9919F7F58600ADA305 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		318F5F9919F7F58600ADA305 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		318F5F9C19F7F5CF00ADA305 /* objcCMR.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = objcCMR.xcdatamodel; sourceTree = "<group>"; };
 		318F5F9E19F7F63E00ADA305 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		318F5FA019F7F64200ADA305 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -129,7 +129,7 @@
 			children = (
 				318F5F6B19F7F51800ADA305 /* AppDelegate.h */,
 				318F5F6C19F7F51800ADA305 /* AppDelegate.m */,
-				318F5F9919F7F58600ADA305 /* main.storyboard */,
+				318F5F9919F7F58600ADA305 /* Main.storyboard */,
 				318F5F8D19F7F56800ADA305 /* FISPiratesViewController.h */,
 				318F5F8E19F7F56800ADA305 /* FISPiratesViewController.m */,
 				318F5F8F19F7F56800ADA305 /* FISShipsViewController.h */,
@@ -288,7 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				318F5F7819F7F51800ADA305 /* LaunchScreen.xib in Resources */,
-				318F5F9A19F7F58600ADA305 /* main.storyboard in Resources */,
+				318F5F9A19F7F58600ADA305 /* Main.storyboard in Resources */,
 				318F5F7519F7F51800ADA305 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

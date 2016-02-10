@@ -7,6 +7,8 @@
 //
 
 #import "FISShipsViewController.h"
+#import "Ship.h"
+#import "FISShipDetailViewController.h"
 
 @interface FISShipsViewController ()
 
@@ -44,24 +46,21 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return self.ships.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"shipCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    Ship *ship = self.ships[indexPath.row];
+    [cell.textLabel setText:ship.name ? ship.name : @"(untitled ship)"];
     
     return cell;
 }
@@ -105,16 +104,16 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    Ship *ship = self.ships[indexPath.row];
+    
+    FISShipDetailViewController *detailViewController = (FISShipDetailViewController *)segue.destinationViewController;
+    [detailViewController setShip:ship];
 }
-
- */
 
 @end

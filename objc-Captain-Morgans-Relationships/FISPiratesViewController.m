@@ -7,9 +7,13 @@
 //
 
 #import "FISPiratesViewController.h"
+#import "FISPiratesDataStore.h"
+#import "Pirate.h"
+#import "FISShipsViewController.h"
 
 @interface FISPiratesViewController ()
-
+@property (nonatomic, strong) NSArray *pirates;
+@property (nonatomic, strong) FISPiratesDataStore *store;
 @end
 
 @implementation FISPiratesViewController
@@ -26,12 +30,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self setStore:[FISPiratesDataStore sharedPiratesDataStore]];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.store fetchData];
+    [self setPirates:self.store.pirates];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,24 +59,21 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return self.pirates.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"pirateCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    Pirate *pirate = self.pirates[indexPath.row];
+    [cell.textLabel setText:pirate.name];
     
     return cell;
 }
@@ -105,16 +117,16 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    Pirate *pirate = self.pirates[indexPath.row];
+    
+    FISShipsViewController *shipsViewController = (FISShipsViewController *)segue.destinationViewController;
+    [shipsViewController setShips:pirate.ships.allObjects];
 }
-
- */
 
 @end

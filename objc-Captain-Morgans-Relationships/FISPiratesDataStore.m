@@ -133,17 +133,12 @@
     NSArray *pirates = [self.managedObjectContext executeFetchRequest:piratesRequest error:&error];
     if (error) return;
     
-    NSMutableDictionary *piratesAndShips = [NSMutableDictionary dictionary];
-    for (Pirate *pirate in pirates) {
-        [piratesAndShips setObject:pirate.ships forKey:pirate];
-    }
-    
     // TODO: finish this so it will generate test data if your datastore is empty
-    if (piratesAndShips.count == 0) {
+    if (pirates.count == 0) {
         [self generateTestData];
     }
     
-    [self setPiratesAndShips:piratesAndShips];
+    [self setPirates:pirates];
 }
 
 

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FISShipsViewController : UITableViewController
-
+@property (nonatomic, strong) NSArray *ships;
 @end
