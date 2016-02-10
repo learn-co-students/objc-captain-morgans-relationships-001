@@ -128,10 +128,22 @@
 {
     // TODO: make an NSFetchRequest, execute and fill datastore
     
+    NSFetchRequest *piratesRequest = [NSFetchRequest fetchRequestWithEntityName:@"Pirate"];
+    NSError *error;
+    NSArray *pirates = [self.managedObjectContext executeFetchRequest:piratesRequest error:&error];
+    if (error) return;
+    
+    NSMutableDictionary *piratesAndShips = [NSMutableDictionary dictionary];
+    for (Pirate *pirate in pirates) {
+        [piratesAndShips setObject:pirate.ships forKey:pirate];
+    }
+    
     // TODO: finish this so it will generate test data if your datastore is empty
-    if (<#yourStorageArrayProperty#>.count == 0) {
+    if (piratesAndShips.count == 0) {
         [self generateTestData];
     }
+    
+    [self setPiratesAndShips:piratesAndShips];
 }
 
 
