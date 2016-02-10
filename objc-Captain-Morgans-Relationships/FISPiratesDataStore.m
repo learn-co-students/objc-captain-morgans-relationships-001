@@ -136,6 +136,7 @@
     // TODO: finish this so it will generate test data if your datastore is empty
     if (pirates.count == 0) {
         [self generateTestData];
+        return;
     }
     
     [self setPirates:pirates];

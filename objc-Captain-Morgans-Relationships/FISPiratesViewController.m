@@ -45,7 +45,8 @@
     [super viewWillAppear:animated];
     
     [self.store fetchData];
-    [self setPirates:self.store.pirates];
+    NSArray *pirates = self.store.pirates;
+    [self setPirates:pirates];
     [self.tableView reloadData];
 }
 
@@ -122,11 +123,13 @@
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    if (![segue.identifier isEqualToString:@"showShips"]) return;
+    
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     Pirate *pirate = self.pirates[indexPath.row];
     
     FISShipsViewController *shipsViewController = (FISShipsViewController *)segue.destinationViewController;
-    [shipsViewController setShips:pirate.ships.allObjects];
+    [shipsViewController setPirate:pirate];
 }
 
 @end

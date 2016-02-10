@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Pirates-->
@@ -31,7 +32,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="0ea-RU-79e" kind="push" id="YhA-rW-5Du"/>
+                                    <segue destination="0ea-RU-79e" kind="push" identifier="showShips" id="YhA-rW-5Du"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -40,7 +41,13 @@
                             <outlet property="delegate" destination="WpB-Cy-v6j" id="Oiy-PX-S1n"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Pirates" id="oy1-dq-mVl"/>
+                    <navigationItem key="navigationItem" title="Pirates" id="oy1-dq-mVl">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lPd-5G-8Z0">
+                            <connections>
+                                <segue destination="EFY-tf-nSt" kind="modal" identifier="createPirate" id="t4V-3C-H1D"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="II1-Ug-Nrc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -131,6 +138,78 @@
             </objects>
             <point key="canvasLocation" x="1621" y="64"/>
         </scene>
+        <!--Add Ship View Controller-->
+        <scene sceneID="noe-ff-Zfs">
+            <objects>
+                <viewController id="ffZ-1u-4RH" customClass="FISAddShipViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w0K-lm-9i9"/>
+                        <viewControllerLayoutGuide type="bottom" id="vIB-xc-AOV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HUp-Zh-93w">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SSE-I4-67r">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Add Ship" id="jbu-ku-gx7">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="B6Y-cA-qKz">
+                                            <connections>
+                                                <action selector="cancel:" destination="ffZ-1u-4RH" id="HD5-hZ-e4X"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="ffZ-1u-4RH" id="giE-Hv-kND"/>
+                                </connections>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ship name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VlH-8Z-oGw">
+                                <rect key="frame" x="16" y="80" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ru2-Dc-TA2">
+                                <rect key="frame" x="16" y="118" width="288" height="29"/>
+                                <segments>
+                                    <segment title="sail"/>
+                                    <segment title="gas"/>
+                                    <segment title="electric"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVd-DF-fbi">
+                                <rect key="frame" x="112" y="154" width="97" height="30"/>
+                                <state key="normal" title="Add New Ship"/>
+                                <connections>
+                                    <action selector="addShip:" destination="ffZ-1u-4RH" eventType="touchUpInside" id="enU-dp-bIC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SSE-I4-67r" firstAttribute="leading" secondItem="HUp-Zh-93w" secondAttribute="leading" id="59b-N6-dfL"/>
+                            <constraint firstItem="YVd-DF-fbi" firstAttribute="top" secondItem="ru2-Dc-TA2" secondAttribute="bottom" constant="8" id="6in-eJ-r0D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VlH-8Z-oGw" secondAttribute="trailing" id="ISy-Qp-AGU"/>
+                            <constraint firstItem="VlH-8Z-oGw" firstAttribute="top" secondItem="w0K-lm-9i9" secondAttribute="bottom" constant="60" id="JTK-Fh-PZA"/>
+                            <constraint firstItem="YVd-DF-fbi" firstAttribute="centerX" secondItem="HUp-Zh-93w" secondAttribute="centerX" id="LEf-qD-hzD"/>
+                            <constraint firstItem="SSE-I4-67r" firstAttribute="top" secondItem="w0K-lm-9i9" secondAttribute="bottom" id="LwY-u6-4ff"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ru2-Dc-TA2" secondAttribute="trailing" id="TfX-3W-6i9"/>
+                            <constraint firstItem="VlH-8Z-oGw" firstAttribute="leading" secondItem="HUp-Zh-93w" secondAttribute="leadingMargin" id="Wm3-oF-LLS"/>
+                            <constraint firstItem="ru2-Dc-TA2" firstAttribute="top" secondItem="VlH-8Z-oGw" secondAttribute="bottom" constant="8" id="eYP-Hr-hMD"/>
+                            <constraint firstAttribute="trailing" secondItem="SSE-I4-67r" secondAttribute="trailing" id="wGx-Ax-7kY"/>
+                            <constraint firstItem="ru2-Dc-TA2" firstAttribute="leading" secondItem="HUp-Zh-93w" secondAttribute="leadingMargin" id="yHs-yu-dgp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segmentedControl" destination="ru2-Dc-TA2" id="wFE-Bg-BBt"/>
+                        <outlet property="textField" destination="VlH-8Z-oGw" id="t07-Tf-J0O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="46v-DD-0an" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1124" y="-588"/>
+        </scene>
         <!--Ships-->
         <scene sceneID="1yf-z7-Z2R">
             <objects>
@@ -157,7 +236,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="M8v-D0-qZp" kind="push" id="SyK-qo-UYE"/>
+                                    <segue destination="M8v-D0-qZp" kind="push" identifier="showShipDetails" id="SyK-qo-UYE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -166,11 +245,17 @@
                             <outlet property="delegate" destination="0ea-RU-79e" id="Flg-7J-gRg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Ships" id="nn0-kR-6LF"/>
+                    <navigationItem key="navigationItem" title="Ships" id="nn0-kR-6LF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qc2-GU-rFZ">
+                            <connections>
+                                <segue destination="ffZ-1u-4RH" kind="modal" identifier="addShip" id="sJa-iK-PWd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EN4-wf-uiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1124" y="64"/>
+            <point key="canvasLocation" x="1124" y="58"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="z3r-s1-QPj">
@@ -189,6 +274,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15O-Mo-3JS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="58" y="58"/>
+        </scene>
+        <!--Create Pirate View Controller-->
+        <scene sceneID="2FA-U4-EgN">
+            <objects>
+                <viewController id="EFY-tf-nSt" customClass="FISCreatePirateViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hmy-ax-Z2k"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Y6-v1-AaX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EGR-12-dwF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wW2-MJ-QNu">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Create Pirate" id="XO0-Xg-ln4">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="2Wm-8O-8BN">
+                                            <connections>
+                                                <action selector="cancel:" destination="EFY-tf-nSt" id="ZCo-7u-coI"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="EFY-tf-nSt" id="n9c-Bl-MfC"/>
+                                </connections>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name of pirate" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OOy-wV-cDn">
+                                <rect key="frame" x="16" y="80" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2k-tg-pQy">
+                                <rect key="frame" x="98" y="118" width="124" height="30"/>
+                                <state key="normal" title="Create New Pirate"/>
+                                <connections>
+                                    <action selector="createPirate:" destination="EFY-tf-nSt" eventType="touchUpInside" id="zrz-5Z-PgQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wW2-MJ-QNu" secondAttribute="trailing" id="QL0-bG-8Jt"/>
+                            <constraint firstItem="wW2-MJ-QNu" firstAttribute="top" secondItem="Hmy-ax-Z2k" secondAttribute="bottom" id="dAL-89-DH6"/>
+                            <constraint firstItem="wW2-MJ-QNu" firstAttribute="leading" secondItem="EGR-12-dwF" secondAttribute="leading" id="jYM-PC-rRz"/>
+                            <constraint firstItem="OOy-wV-cDn" firstAttribute="leading" secondItem="EGR-12-dwF" secondAttribute="leadingMargin" id="jeT-mj-j9k"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OOy-wV-cDn" secondAttribute="trailing" id="meM-Ok-923"/>
+                            <constraint firstItem="P2k-tg-pQy" firstAttribute="centerX" secondItem="EGR-12-dwF" secondAttribute="centerX" id="pvd-eR-yke"/>
+                            <constraint firstItem="P2k-tg-pQy" firstAttribute="top" secondItem="OOy-wV-cDn" secondAttribute="bottom" constant="8" id="roZ-ma-457"/>
+                            <constraint firstItem="OOy-wV-cDn" firstAttribute="top" secondItem="Hmy-ax-Z2k" secondAttribute="bottom" constant="60" id="ysJ-nW-BYq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="OOy-wV-cDn" id="ey2-8P-ahX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JMo-8I-utn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="572" y="-588"/>
         </scene>
     </scenes>
 </document>

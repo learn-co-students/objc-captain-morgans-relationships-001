@@ -9,9 +9,12 @@
 #import "FISShipsViewController.h"
 #import "Ship.h"
 #import "FISShipDetailViewController.h"
+#import "FISAddShipViewController.h"
+#import "FISPiratesDataStore.h"
 
 @interface FISShipsViewController ()
-
+@property (nonatomic, strong) NSArray *ships;
+@property (nonatomic, strong) FISPiratesDataStore *store;
 @end
 
 @implementation FISShipsViewController
@@ -28,12 +31,26 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    FISPiratesDataStore *store = [FISPiratesDataStore sharedPiratesDataStore];
+    [self setStore:store];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.store fetchData];
+    Pirate *pirate = [self.store.pirates filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"name == %@", self.pirate.name]].lastObject;
+    [self setPirate:pirate];
+    [self setShips:self.pirate.ships.allObjects];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -109,6 +126,14 @@
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    if ([segue.identifier isEqualToString:@"addShip"]) {
+        FISAddShipViewController *addShipViewController = (FISAddShipViewController *)segue.destinationViewController;
+        [addShipViewController setPirate:self.pirate];
+        return;
+    }
+    
+    if (![segue.identifier isEqualToString:@"showShipDetails"]) return;
+    
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     Ship *ship = self.ships[indexPath.row];
     

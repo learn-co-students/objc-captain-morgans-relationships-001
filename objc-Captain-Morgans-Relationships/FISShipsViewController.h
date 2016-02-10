@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Pirate.h"
 
 @interface FISShipsViewController : UITableViewController
-@property (nonatomic, strong) NSArray *ships;
+@property (nonatomic, strong) Pirate *pirate;
 @end
