@@ -7,6 +7,8 @@
 //
 
 #import "FISShipDetailViewController.h"
+#import "Pirate.h"
+#import "Engine.h"
 
 @interface FISShipDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *shipNameLabel;
@@ -32,6 +34,17 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.shipNameLabel setText:self.ship.name ? self.ship.name : @"(untitled ship)"];
+    [self.pirateNameLabel setText:self.ship.pirate.name];
+    [self.propTypeLabel setText:self.ship.engine.propulsionType];
+//    [self.hpLabel setText:<#(NSString * _Nullable)#>];
+//    [self.sailSizeLabel setText:<#(NSString * _Nullable)#>];
 }
 
 - (void)didReceiveMemoryWarning
