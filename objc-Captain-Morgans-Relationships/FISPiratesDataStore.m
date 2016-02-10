@@ -7,6 +7,9 @@
 //
 
 #import "FISPiratesDataStore.h"
+#import "Pirate.h"
+#import "Ship.h"
+#import "Engine.h"
 
 @implementation FISPiratesDataStore
 @synthesize managedObjectContext = _managedObjectContext;
@@ -76,7 +79,45 @@
 
 -(void) generateTestData
 {
-    // TODO: create test data
+    Pirate *blackbeard = [NSEntityDescription insertNewObjectForEntityForName:@"Pirate" inManagedObjectContext:self.managedObjectContext];
+    [blackbeard setName:@"Blackbeard"];
+    
+    Engine *queenAnnesEngine = [NSEntityDescription insertNewObjectForEntityForName:@"Engine" inManagedObjectContext:self.managedObjectContext];
+    [queenAnnesEngine setPropulsionType:@"sail"];
+    
+    Ship *queenAnnesRevenge = [NSEntityDescription insertNewObjectForEntityForName:@"Ship" inManagedObjectContext:self.managedObjectContext];
+    [queenAnnesRevenge setName:@"Queen Anne's Revenge"];
+    [queenAnnesRevenge setEngine:queenAnnesEngine];
+    [queenAnnesRevenge setPirate:blackbeard];
+    
+    Engine *adventureEngine = [NSEntityDescription insertNewObjectForEntityForName:@"Engine" inManagedObjectContext:self.managedObjectContext];
+    [adventureEngine setPropulsionType:@"electric"];
+    
+    Ship *adventure = [NSEntityDescription insertNewObjectForEntityForName:@"Ship" inManagedObjectContext:self.managedObjectContext];
+    [adventure setName:@"Adventure"];
+    [adventure setEngine:adventureEngine];
+    [adventure setPirate:blackbeard];
+    
+    Pirate *anneBonny = [NSEntityDescription insertNewObjectForEntityForName:@"Pirate" inManagedObjectContext:self.managedObjectContext];
+    [anneBonny setName:@"Anne Bonny"];
+    
+    Engine *revengeEngine = [NSEntityDescription insertNewObjectForEntityForName:@"Engine" inManagedObjectContext:self.managedObjectContext];
+    [revengeEngine setPropulsionType:@"gas"];
+    
+    Ship *revenge = [NSEntityDescription insertNewObjectForEntityForName:@"Ship" inManagedObjectContext:self.managedObjectContext];
+    [revenge setName:@"Revenge"];
+    [revenge setEngine:revengeEngine];
+    [revenge setPirate:anneBonny];
+    
+    Pirate *chingShih = [NSEntityDescription insertNewObjectForEntityForName:@"Pirate" inManagedObjectContext:self.managedObjectContext];
+    [chingShih setName:@"Ching Shih"];
+    
+    Engine *chingShihShipEngine = [NSEntityDescription insertNewObjectForEntityForName:@"Engine" inManagedObjectContext:self.managedObjectContext];
+    [chingShihShipEngine setPropulsionType:@"sail"];
+    
+    Ship *chingShihShip = [NSEntityDescription insertNewObjectForEntityForName:@"Ship" inManagedObjectContext:self.managedObjectContext];
+    [chingShihShip setEngine:chingShihShipEngine];
+    [chingShihShip setPirate:chingShih];
     
     // save and refetch
     [self saveContext];
