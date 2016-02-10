@@ -22,6 +22,12 @@
 		318F5FA119F7F64200ADA305 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318F5FA019F7F64200ADA305 /* Foundation.framework */; };
 		318F5FA319F7F64900ADA305 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318F5FA219F7F64900ADA305 /* UIKit.framework */; };
 		318F5FA519F7F65200ADA305 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318F5FA419F7F65200ADA305 /* CoreGraphics.framework */; };
+		7DF3D3FC1C6BBE0B00D926BD /* Ship+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3D3F11C6BBE0B00D926BD /* Ship+CoreDataProperties.m */; };
+		7DF3D3FD1C6BBE0B00D926BD /* Ship.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3D3F31C6BBE0B00D926BD /* Ship.m */; };
+		7DF3D3FE1C6BBE0B00D926BD /* Pirate+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3D3F51C6BBE0B00D926BD /* Pirate+CoreDataProperties.m */; };
+		7DF3D3FF1C6BBE0B00D926BD /* Pirate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3D3F71C6BBE0B00D926BD /* Pirate.m */; };
+		7DF3D4001C6BBE0B00D926BD /* Engine+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3D3F91C6BBE0B00D926BD /* Engine+CoreDataProperties.m */; };
+		7DF3D4011C6BBE0B00D926BD /* Engine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3D3FB1C6BBE0B00D926BD /* Engine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +66,18 @@
 		318F5FA419F7F65200ADA305 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3ED552BF570604B81DCFA129 /* libPods-objc-Captain-Morgans-RelationshipsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-objc-Captain-Morgans-RelationshipsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DE44453062B6D35873C0C8 /* Pods-objc-Captain-Morgans-RelationshipsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-objc-Captain-Morgans-RelationshipsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-objc-Captain-Morgans-RelationshipsTests/Pods-objc-Captain-Morgans-RelationshipsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7DF3D3F01C6BBE0B00D926BD /* Ship+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Ship+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7DF3D3F11C6BBE0B00D926BD /* Ship+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Ship+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7DF3D3F21C6BBE0B00D926BD /* Ship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ship.h; sourceTree = "<group>"; };
+		7DF3D3F31C6BBE0B00D926BD /* Ship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ship.m; sourceTree = "<group>"; };
+		7DF3D3F41C6BBE0B00D926BD /* Pirate+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pirate+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7DF3D3F51C6BBE0B00D926BD /* Pirate+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Pirate+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7DF3D3F61C6BBE0B00D926BD /* Pirate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pirate.h; sourceTree = "<group>"; };
+		7DF3D3F71C6BBE0B00D926BD /* Pirate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pirate.m; sourceTree = "<group>"; };
+		7DF3D3F81C6BBE0B00D926BD /* Engine+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Engine+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7DF3D3F91C6BBE0B00D926BD /* Engine+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Engine+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7DF3D3FA1C6BBE0B00D926BD /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
+		7DF3D3FB1C6BBE0B00D926BD /* Engine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Engine.m; sourceTree = "<group>"; };
 		D889F0FFAF70EAE705A5930C /* Pods-objc-Captain-Morgans-RelationshipsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-objc-Captain-Morgans-RelationshipsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-objc-Captain-Morgans-RelationshipsTests/Pods-objc-Captain-Morgans-RelationshipsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +139,18 @@
 				318F5F9319F7F56800ADA305 /* FISPiratesDataStore.h */,
 				318F5F9419F7F56800ADA305 /* FISPiratesDataStore.m */,
 				318F5F9B19F7F5CF00ADA305 /* objcCMR.xcdatamodeld */,
+				7DF3D3F01C6BBE0B00D926BD /* Ship+CoreDataProperties.h */,
+				7DF3D3F11C6BBE0B00D926BD /* Ship+CoreDataProperties.m */,
+				7DF3D3F21C6BBE0B00D926BD /* Ship.h */,
+				7DF3D3F31C6BBE0B00D926BD /* Ship.m */,
+				7DF3D3F41C6BBE0B00D926BD /* Pirate+CoreDataProperties.h */,
+				7DF3D3F51C6BBE0B00D926BD /* Pirate+CoreDataProperties.m */,
+				7DF3D3F61C6BBE0B00D926BD /* Pirate.h */,
+				7DF3D3F71C6BBE0B00D926BD /* Pirate.m */,
+				7DF3D3F81C6BBE0B00D926BD /* Engine+CoreDataProperties.h */,
+				7DF3D3F91C6BBE0B00D926BD /* Engine+CoreDataProperties.m */,
+				7DF3D3FA1C6BBE0B00D926BD /* Engine.h */,
+				7DF3D3FB1C6BBE0B00D926BD /* Engine.m */,
 				318F5F7419F7F51800ADA305 /* Images.xcassets */,
 				318F5F7619F7F51800ADA305 /* LaunchScreen.xib */,
 				318F5F6719F7F51800ADA305 /* Supporting Files */,
@@ -328,7 +358,13 @@
 				318F5F9719F7F56800ADA305 /* FISShipDetailViewController.m in Sources */,
 				318F5F9619F7F56800ADA305 /* FISShipsViewController.m in Sources */,
 				318F5F6D19F7F51800ADA305 /* AppDelegate.m in Sources */,
+				7DF3D4001C6BBE0B00D926BD /* Engine+CoreDataProperties.m in Sources */,
+				7DF3D3FC1C6BBE0B00D926BD /* Ship+CoreDataProperties.m in Sources */,
+				7DF3D4011C6BBE0B00D926BD /* Engine.m in Sources */,
 				318F5F9D19F7F5CF00ADA305 /* objcCMR.xcdatamodeld in Sources */,
+				7DF3D3FF1C6BBE0B00D926BD /* Pirate.m in Sources */,
+				7DF3D3FD1C6BBE0B00D926BD /* Ship.m in Sources */,
+				7DF3D3FE1C6BBE0B00D926BD /* Pirate+CoreDataProperties.m in Sources */,
 				318F5F9519F7F56800ADA305 /* FISPiratesViewController.m in Sources */,
 				318F5F6A19F7F51800ADA305 /* main.m in Sources */,
 				318F5F9819F7F56800ADA305 /* FISPiratesDataStore.m in Sources */,
